@@ -17,10 +17,6 @@ hi def link note Text
 syn match completed /\s*[xX]\s.\+$/
 hi def link completed Comment
 
-" Todo starts with '*'
-syn match task /\s*\*\s.\+$/
-hi def link task Operator
-
 " Emphasize starting with '!'
 syn match important /\s*!.*$/
 hi def link important Question
@@ -64,13 +60,5 @@ hi def link topLevel Directory
 
 syn match topLevel /^\S\+.*\n[-=]\+$/ contains=@Spell,topLevelUnderline
 syn match topLevelUnderline /^[-=]\+$/
-
-" Dates
-syn match date @\<[0-9]\{4}[-/][0-9]\{2}[-/][0-9]\{2}@
-hi def link date Directory
-
-" Numbers
-syn match time @\<[0-9]\{2}:[0-9]\{2}:[0-9]\{2}\([,.][0-9]\+\)\?@
-hi def link time Number
 
 let b:current_syntax = "journal"
